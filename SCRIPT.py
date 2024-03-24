@@ -47,6 +47,11 @@ def get_graphics_ID():
 def get_graphics_size():
     for ram in c.Win32_VideoController():
         graphics_size=ram.AdapterRAM
+        if graphics_size is None:
+            graphics_size=0
+        else:
+            # Convert bytes to GB
+            graphics_size = ram.AdapterRAM / (1024 ** 3)  
     return graphics_size 
            
 
@@ -68,7 +73,8 @@ def collect_performance_data():
             data=get_graphics_ID()
           
         elif metric =="graphics_ram_size":
-            data = get_graphics_size()  
+            data = get_graphics_size() 
+             
              
         results[metric] = data
     end_time = time()  # Record ending time

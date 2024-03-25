@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the project directory
-cd "C:\Users\wwwlu\Desktop\SOLOMON'S PROJECT\codes\Checking-Computer-s-Performances-master\Checking-Computer-s-Performances-master\Computer Metrics Checker\Performance_New"
+cd "location of file"
 
 # Initialize a new Git repository
 git init
@@ -13,7 +13,7 @@ git add .
 git commit -m "Initial commit"
 
 # Set your Git user email globally
-git config --global user.email "www.luiskamensah@gmail.com"
+git config --global user.email "email"
 
 # Set your Git user name globally
 git config --global user.name "JimmyOlsen05"
